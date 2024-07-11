@@ -1,0 +1,92 @@
+<resources>
+    <string name="app_name">BanaClassify</string>
+    <string name="gallery">gallery\n</string>
+    <string name="analyze">analyze\n</string>
+    <string name="image_classifier_failed">Failed to analyze</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="save_button">Save Result\n</string>
+    <string name="analysis_score">Score: %s</string>
+    <string name="hasil_analisis">Results</string>
+    <string name="analysis_type">variety: %s</string>
+    <string name="moreInfo">Click the above text for more information</string>
+    <string name="btn_save">Save Result</string>
+    <string name="Btn_delete">delete</string>
+
+    <string name="title_home">Home</string>
+    <string name="title_scan">Scan</string>
+    <string name="title_history">History</string>
+    <string name="title_profile">Profile</string>
+
+    <string-array name="data_name">
+        <item>Pisang Ambon</item>
+        <item>Pisang Barangan</item>
+        <item>Pisang Cavendish</item>
+        <item>Pisang Kapok</item>
+        <item>Pisang Nangka</item>
+        <item>Pisang Raja</item>
+        <item>Pisang Susu</item>
+        <item>Pisang Tanduk</item>
+    </string-array>
+
+    <string-array name="data_description">
+        <item>Description : Pisang Ambon is a large banana with sweet flavor, often eaten fresh or used in desserts. \n
+        Benefits: High in vitamins B6 and C, helps in improving digestion and provides quick energy.</item>
+        <item>Description: Pisang Barangan has red skin when ripe and a sweet taste, commonly found in traditional markets. \n
+        Benefits: Rich in antioxidants, beneficial for heart health and helps in maintaining healthy blood pressure levels.</item>
+        <item>Description: Pisang Cavendish is widely recognized internationally, with smooth yellow skin and very sweet taste. \n
+        Benefits: Excellent source of potassium which is essential for heart health, muscle function, and blood pressure regulation.</item>
+        <item>Description: Pisang Kepok is a stubby, thick-skinned banana often used for cooking, especially in fried dishes or banana chips. \n
+        Benefits: High fiber content aids digestion, provides a good source of carbohydrates for sustained energy release.</item>
+        <item>Description: Pisang Nangka is known for its aromatic flavor and is often used in cooking. \n
+        enefits: Rich in vitamins and minerals, helps in improving digestion, and provides a natural energy boost.</item>
+        <item>Description: Pisang Raja is often used in traditional Indonesian dishes and has a unique sweet tast \n
+        Benefits: Contains high levels of vitamin A, which is good for vision and immune system support.</item>
+        <item>Description: Pisang Susu is smaller in size with a sweet and creamy texture. \n
+        Benefits: Good source of essential vitamins and minerals, helps in maintaining healthy bones and skin. Pisang Tanduk</item>
+    </string-array>
+
+    <integer-array name="data_photo">
+        <item>@drawable/pisang_ambon</item>
+        <item>@drawable/pisang_barangan</item>
+        <item>@drawable/pisang_cavendish</item>
+        <item>@drawable/pisang_kapok</item>
+        <item>@drawable/pisang_nangka</item>
+        <item>@drawable/pisang_raja</item>
+        <item>@drawable/pisang_susu</item>
+        <item>@drawable/pisang_tanduk</item>
+
+    </integer-array>
+    <string name="heroes_name">Varieties of bananas</string>
+    <string name="description">description</string>
+    <string name="HomeTitle">classification of types of bananas</string>
+    <string name="DescHome">How to use the app</string>
+    <string name="BananaType">Banana_Type</string>
+    <string name="profile">Profile</string>
+
+    <string name="bio">As an informatics student and mobile development enthusiast, I have a passion for creating beautiful and functional apps for users. I write code primarily in Kotlin, which is a popular programming language for Android development. My focus is on creating visually appealing and intuitive user experiences that make using the app a pleasure.</string>
+    <string name="user_information"><Author></Author> Information</string>
+    <string name="username_">Name</string>
+    <string name="Author">Laurens Fernando Pasaribu</string>
+    <string name="gender">Gender</string>
+    <string name="male">Male</string>
+    <string name="Major">Major</string>
+    <string name="Informatics">Informatics</string>
+    <string name="Industrial_Engineering">Industrial Engineering</string>
+    <string name="Student_Identification_Number">Student Identification Number</string>
+    <string name="Faculty">Faculty</string>
+    <string name="HomeLe">Discover</string>
+    <string name="explore">classification of types of bananas</string>
+    <string name="curios">Curious about a bird?</string>
+    <string name="efforels">classify the types easily</string>
+    <string name="btnScan">Scan Now</string>
+    <string name="tips">facts about bananas</string>
+    <string name="attracting">How to Use </string>
+    <string name="highPrediction">types of bananas</string>
+    <string name="identify">Identify</string>
+    <string name="snap">Snap and Identify</string>
+    <string name="load">Load Image</string>
+    <string name="take">Take Image</string>
+    <string name="descScan">Classify banana species effortlessly by either capturing a photo with your camera or selecting an existing image from your gallery.</string>
+    <string name="Tentang">About</string>
+</resources>
