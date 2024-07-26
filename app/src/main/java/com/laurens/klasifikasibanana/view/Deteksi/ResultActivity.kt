@@ -27,7 +27,7 @@ import java.util.Date
 
 class ResultActivity : AppCompatActivity() {
     private lateinit var binding: ActivityResultBinding
-    private lateinit var birdDescriptions: Map<String, String>
+    private lateinit var BananaDescriptions: Map<String, String>
     private lateinit var gpsTracker: GPSTracker
 
     private val requestLocationPermissionLauncher =
@@ -84,7 +84,8 @@ class ResultActivity : AppCompatActivity() {
         val bufferedReader = BufferedReader(InputStreamReader(inputStream))
         val jsonString = bufferedReader.use { it.readText() }
         val jsonObject = JSONObject(jsonString)
-        birdDescriptions = jsonObject.keys().asSequence().associateWith { jsonObject.getString(it) }
+        BananaDescriptions =
+            jsonObject.keys().asSequence().associateWith { jsonObject.getString(it) }
     }
 
     private fun setupListeners() {
@@ -93,8 +94,12 @@ class ResultActivity : AppCompatActivity() {
             btnSaveAnalysis.setOnClickListener { saveCurrentAnalysis() }
         }
     }
+
     private fun searchOnGoogle() {
-        val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://www.google.com/search?q=${binding.tvLabel.text}"))
+        val intent = Intent(
+            Intent.ACTION_VIEW,
+            Uri.parse("https://www.google.com/search?q=${binding.tvLabel.text}")
+        )
         startActivity(intent)
     }
 
@@ -105,11 +110,14 @@ class ResultActivity : AppCompatActivity() {
 
         binding.tvLabel.text = getString(R.string.analysis_type, label)
         binding.ada.text = getString(R.string.moreInfo)
-        binding.tvScore.text = getString(R.string.analysis_score, NumberFormat.getPercentInstance().format(confidence).toString())
+        binding.tvScore.text = getString(
+            R.string.analysis_score,
+            NumberFormat.getPercentInstance().format(confidence).toString()
+        )
         binding.imageView.load(imageUri)
 
         // Display the bird description if available
-        val description = birdDescriptions[label] ?: "Deskripsi tidak tersedia untuk burung ini."
+        val description = BananaDescriptions[label] ?: "Deskripsi tidak tersedia untuk burung ini."
         binding.additionalInfoTextView.text = description
     }
 
@@ -117,12 +125,25 @@ class ResultActivity : AppCompatActivity() {
         val label = intent.getStringExtra("label") ?: return
         val score = intent.getFloatExtra("confidence", 0.0f)
         val imageUri = intent.getStringExtra("imageUri") ?: return
-
-        saveAnalysisResult(label, score, imageUri)
+        val location = binding.tvLocation.text.toString().removePrefix("Your Location: ")
+        val dateTime = binding.tvDateTime.text.toString().removePrefix("Time: ")
+        saveAnalysisResult(label, score, imageUri, dateTime, location)
     }
 
-    private fun saveAnalysisResult(label: String, score: Float, imageUri: String) {
-        val analysisResult = AnalysisResult(label = label, score = score, imageUri = imageUri)
+    private fun saveAnalysisResult(
+        label: String,
+        score: Float,
+        imageUri: String,
+        date: String,
+        location: String
+    ) {
+        val analysisResult = AnalysisResult(
+            label = label,
+            score = score,
+            imageUri = imageUri,
+            date = date,
+            location = location
+        )
         val db = AppDatabase.getDatabase(this)
         val dao = db.analysisResultDao()
 
@@ -130,9 +151,13 @@ class ResultActivity : AppCompatActivity() {
             dao.insert(analysisResult)
             runOnUiThread {
                 // Display a toast message to inform the user
-                Toast.makeText(this@ResultActivity, "Analysis saved successfully", Toast.LENGTH_SHORT).show()
+                Toast.makeText(
+                    this@ResultActivity,
+                    "Analysis saved successfully",
+                    Toast.LENGTH_SHORT
+                ).show()
             }
         }
-    }
 
+    }
 }

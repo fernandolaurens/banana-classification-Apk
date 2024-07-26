@@ -42,6 +42,8 @@ class HistoryAdapter(
                         putExtra("imageUri", item.imageUri)
                         putExtra("label", item.label)
                         putExtra("score", item.score)
+                        putExtra("date", item.date) // tambahkan date dari AnalysisResult
+                        putExtra("location", item.location) // tambahkan location dari AnalysisResult
                     }
                     context.startActivity(intent)
                 }

@@ -13,6 +13,7 @@
     <string name="btn_save">Save Result</string>
     <string name="Btn_delete">delete</string>
 
+    <string name="desain">Desain By Laurens fernando Pasaribu</string>
     <string name="title_home">Home</string>
     <string name="title_scan">Scan</string>
     <string name="title_history">History</string>
@@ -76,7 +77,7 @@
     <string name="Student_Identification_Number">Student Identification Number</string>
     <string name="Faculty">Faculty</string>
     <string name="HomeLe">Discover</string>
-    <string name="explore">classification of types of bananas</string>
+    <string name="explore">Classification of Banana Varieties</string>
     <string name="curios">Curious about a bird?</string>
     <string name="efforels">classify the types easily</string>
     <string name="btnScan">Scan Now</string>

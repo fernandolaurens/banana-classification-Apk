@@ -33,12 +33,9 @@ import java.nio.ByteOrder
 class ScanFragment : Fragment(R.layout.fragment_scan) {
     private var _binding: FragmentScanBinding? = null
     private val binding get() = _binding!!
-
     private lateinit var captureImageButton: Button
     private lateinit var loadImageButton: Button
     private lateinit var imageView: ImageView
-
-
     private val GALLERY_REQUEST_CODE = 123
 
 

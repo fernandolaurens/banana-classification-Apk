@@ -8,6 +8,8 @@ data class AnalysisResult(
     @PrimaryKey(autoGenerate = true) val id: Int = 0,
     val label: String,
     val score: Float,
-    val imageUri: String
+    val imageUri: String,
+    val date: String? = null, // Properti date dengan nilai default null
+    val location: String? = null
 ) {
 }

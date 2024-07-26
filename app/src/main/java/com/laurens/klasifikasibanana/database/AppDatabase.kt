@@ -16,7 +16,7 @@ abstract class AppDatabase : RoomDatabase() {
             instance ?: synchronized(this) {
                 instance ?: Room.databaseBuilder(
                     context.applicationContext,
-                    AppDatabase::class.java, "birdie_database"
+                    AppDatabase::class.java, "Banana"
                 ).build().also { instance = it }
             }
     }
